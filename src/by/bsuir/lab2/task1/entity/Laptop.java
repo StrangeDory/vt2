@@ -23,12 +23,24 @@ public class Laptop extends Applience{
         this.energyReserve = energyReserve;
     }
 
+    public Laptop(String[] args) {
+        this.price = Integer.parseInt(args[0]);
+        this.weight = Double.parseDouble(args[1]);
+        this.height = Integer.parseInt(args[2]);
+        this.width = Double.parseDouble(args[3]);
+        this.thickness = Double.parseDouble(args[4]);
+        this.material = args[5];
+        this.energyReserve = Integer.parseInt(args[6]);
+        this.operatingSystem = args[7];
+        this.memorySize = Integer.parseInt(args[8]);
+    }
+
     public Laptop(){
         this.price = 0;
         this.weight = 0;
         this.height = 0;
-        this.material = null;
-        this.operatingSystem = null;
+        this.material = "";
+        this.operatingSystem = "";
         this.memorySize = 0;
         this.width = 0;
         this.thickness = 0;

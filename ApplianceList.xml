@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <items>
-    <laptop>
+    <Laptop>
         <price>1565</price>
         <weight>2.2</weight>
         <height>35</height>
@@ -11,8 +11,8 @@
         <energyReserve>148</energyReserve>
         <operatingSystem>Windows</operatingSystem>
         <memorySize>1000</memorySize>
-    </laptop>
-    <mobilePhone>
+    </Laptop>
+    <MobilePhone>
         <price>1039</price>
         <weight>0.8</weight>
         <height>15</height>
@@ -21,24 +21,24 @@
         <material>metal</material>
         <operatingSystem>Android</operatingSystem>
         <memorySize>128</memorySize>
-    </mobilePhone>
-    <teapot>
+    </MobilePhone>
+    <Teapot>
         <price>85</price>
         <powerConsumption>90</powerConsumption>
         <weight>1.2</weight>
         <capacity>1.8</capacity>
         <height>30</height>
         <material>plastic</material>
-    </teapot>
-    <teapot>
+    </Teapot>
+    <Teapot>
         <price>55</price>
         <powerConsumption>60</powerConsumption>
         <weight>0.8</weight>
         <capacity>0.8</capacity>
         <height>20</height>
         <material>plastic</material>
-    </teapot>
-    <fridge>
+    </Teapot>
+    <Fridge>
         <powerConsumption>221</powerConsumption>
         <weight>38</weight>
         <freezerCapacity>20</freezerCapacity>
@@ -46,5 +46,5 @@
         <height>170</height>
         <height>30</height>
         <price>350</price>
-    </fridge>
+    </Fridge>
 </items>

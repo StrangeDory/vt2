@@ -4,6 +4,8 @@ import by.bsuir.lab2.task1.dao.IDAOApplience;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+import by.bsuir.lab2.task1.entity.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -18,6 +20,31 @@ public class DAOImplement implements IDAOApplience {
     private static final String DATABASE_PATH = "ApplianceList.xml";
 
     private Document doc;
+
+    public ArrayList<Applience> getAppliance() {
+        ArrayList<Applience> appliances = new ArrayList<>();
+        ArrayList<ArrayList<String>> fields = find("Laptop");
+        for (ArrayList<String> field : fields) {
+            Laptop laptop = new Laptop(field.toArray(new String[0]));
+            appliances.add(laptop);
+        }
+        fields = find("MobilePhone");
+        for (ArrayList<String> field : fields) {
+            MobilePhone phone = new MobilePhone(field.toArray(new String[0]));
+            appliances.add(phone);
+        }
+        fields = find("Fridge");
+        for (ArrayList<String> field : fields) {
+            Fridge fridge = new Fridge(field.toArray(new String[0]));
+            appliances.add(fridge);
+        }
+        fields = find("Teapot");
+        for (ArrayList<String> field : fields) {
+            Teapot teapot = new Teapot(field.toArray(new String[0]));
+            appliances.add(teapot);
+        }
+        return appliances;
+    }
 
     public ArrayList<ArrayList<String>> find(String groupName) {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -45,7 +72,7 @@ public class DAOImplement implements IDAOApplience {
             }
 
             return objectsInformation;
-        } catch (SAXException | IOException | ParserConfigurationException e) {
+        } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
         }
         return null;

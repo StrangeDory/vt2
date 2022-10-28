@@ -18,13 +18,22 @@ public class Teapot extends Applience implements Serializable {
         this.material = material;
     }
 
+    public Teapot(String[] args) {
+        this.price = Integer.parseInt(args[0]);
+        this.powerConsumption = Integer.parseInt(args[1]);
+        this.weight = Double.parseDouble(args[2]);
+        this.capacity = Double.parseDouble(args[3]);
+        this.height = Integer.parseInt(args[4]);
+        this.material = args[5];
+    }
+
     public Teapot(){
         this.price = 0;
         this.powerConsumption = 0;
         this.weight = 0;
         this.capacity = 0;
         this.height = 0;
-        this.material = null;
+        this.material = "";
     }
 
     public int getPowerConsumption() {

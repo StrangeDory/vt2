@@ -18,6 +18,16 @@ public class Fridge extends Applience {
         this.setPrice(price);
     }
 
+    public Fridge(String[] args) {
+        this.powerConsumption = Integer.parseInt(args[0]);
+        this.weight = Integer.parseInt(args[1]);
+        this.freezerCapacity = Integer.parseInt(args[2]);
+        this.overallCapacity = Integer.parseInt(args[3]);
+        this.height = Integer.parseInt(args[4]);
+        this.width = Integer.parseInt(args[5]);
+        this.setPrice(Integer.parseInt(args[6]));
+    }
+
     public Fridge(){
         this.price = 0;
         this.powerConsumption = 0;
