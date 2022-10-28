@@ -21,6 +21,7 @@ public class DAOImplement implements IDAOApplience {
 
     private Document doc;
 
+    //получить из xml список бытовой техники
     public ArrayList<Applience> getAppliance() {
         ArrayList<Applience> appliances = new ArrayList<>();
         ArrayList<ArrayList<String>> fields = find("Laptop");
@@ -46,6 +47,7 @@ public class DAOImplement implements IDAOApplience {
         return appliances;
     }
 
+    //получить из xml список определённого вида техники
     public ArrayList<ArrayList<String>> find(String groupName) {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         try {
